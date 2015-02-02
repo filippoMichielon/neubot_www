@@ -64,6 +64,4 @@ function log_init() {
     tracker.start();
 };
 
-jQuery(document).ready(function() {
-    i18n.translate(log_init)
-});
+

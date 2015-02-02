@@ -45,7 +45,7 @@ var i18n = {
             success: function(data) {
                 lang = data['www.lang'];
             },
-            async: false
+            async: false  // XXX
         });
         if (!lang || lang == 'default') {
             if (navigator.userLanguage) {

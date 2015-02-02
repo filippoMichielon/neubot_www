@@ -37,7 +37,7 @@ function process_state(data) {
         if (value && value > now) {
             jQuery("#next_rendezvous").text(utils.formatMinutes(value - now));
         }
-    }
+    }a
 
     if (data.events.since) {
         value = utils.getTimeFromSeconds(data.events.since, true);
@@ -73,3 +73,4 @@ function index_init() {
 jQuery(document).ready(function() {
     i18n.translate(index_init);
 });
+

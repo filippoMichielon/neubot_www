@@ -673,7 +673,4 @@ var results = (function () {
 
 }());
 
-jQuery(document).ready(function () {
-    /*"use strict";*/  // Only when running jslint
-    i18n.translate(results.init);
-});
+

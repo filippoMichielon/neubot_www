@@ -170,7 +170,7 @@ var state = (function() {
         //
         function get_state() {
             var params = {
-                url: "/api/state?t=" + curtime,
+                url: "http://127.0.0.1:9774/api/state?t=" + curtime,  // XXX
                 error: get_state_error,
                 success: get_state_success,
                 dataType: "json"
@@ -179,6 +179,8 @@ var state = (function() {
         }
 
         tracker_ctx.start = function() {
+
+            // TODO: make code more robust using try...catch
 
             //
             // Create a qtip that will be shown when a test
