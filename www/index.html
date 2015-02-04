@@ -51,32 +51,35 @@
 		        jQuery.jqplot.config.enablePlugins = true;
                 tracker = state.tracker(function(){});
                 tracker.start();
-
-            });
-
-            $('#content').load('status.html');
-                 
-            $('#resultsbutton').click(function(){
-                $('#content').load('results.html');
-            });
-
-            $('#logbutton').click(function(){
-                $('#content').load('log.html');
-            });
- 
-            $('#privacybutton').click(function(){
-                $('#content').load('privacy.html');
-            });
-
-            $('#settingsbutton').click(function(){
-                $('#content').load('settings.html');
-            });
-
-            $('#statusbutton').click(function(){
+                
                 $('#content').load('status.html');
-            });
-		});
 
+                $('#resultsbutton').click(function(){
+                    $('#content').load('results.html');
+                });
+
+                $('#logbutton').click(function(){
+                    $('#content').load('log.html');
+                });
+ 
+                $('#privacybutton').click(function(){
+                    $('#content').load('privacy.html');
+                });
+
+                $('#settingsbutton').click(function(){
+                    $('#content').load('settings.html');
+                });
+
+                $('#statusbutton').click(function(){
+                    $('#content').load('status.html');
+                });
+
+            });
+        });
+
+		$(document).ajaxComplete(function () {
+            $(".i18n").css("visibility", "visible");         
+        });
    
 
         
@@ -146,7 +149,7 @@
         <div id="debug_div"></div>
         <div id="content"></div>
 
-			<p>ciao</p>
+
 
 
         
