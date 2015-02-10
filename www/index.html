@@ -33,8 +33,8 @@
         <script type="text/javascript" src="js/settings.js"></script>
         <script type="text/javascript" src="js/update.js"></script>
 
-        <script>
-            $(document).ready(function () {
+      <script>
+/*            $(document).ready(function () {
 		        i18n.translate(function () {
 		            jQuery.jqplot.config.enablePlugins = true;
                     tracker = state.tracker(function(){});
@@ -48,13 +48,13 @@
                     });
 
                     $('#logbutton').click(function(){
-                        $('#content').load('log.html');
+                        $('#content').load('log.html');					//questo va in index.js
                         utils.setActiveTab("log");
                     });
  
                     $('#privacybutton').click(function(){
                         $('#content').load('privacy.html');
-                        utils.setActiveTab("privacy");
+                        utils.setActiveTab("privacy");					//traduzione
                     });
 
                     $('#settingsbutton').click(function(){
@@ -67,13 +67,13 @@
                         utils.setActiveTab("index");
                     });
 
-                });
+                });			//creare funzione da mettere come parametro complete di load() negli eventi click che faccia setactivetab e quello che fa ajaxcomplete
             });
 
 		    $(document).ajaxComplete(function () {
                 $(".i18n").css("visibility", "visible");         
             });
-        
+*/        
         </script>
 
         <title>Neubot 0.4.16.9 | Web interface</title>
