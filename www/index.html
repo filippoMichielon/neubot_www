@@ -33,49 +33,6 @@
         <script type="text/javascript" src="js/settings.js"></script>
         <script type="text/javascript" src="js/update.js"></script>
 
-      <script>
-/*            $(document).ready(function () {
-		        i18n.translate(function () {
-		            jQuery.jqplot.config.enablePlugins = true;
-                    tracker = state.tracker(function(){});
-                    tracker.start();
-                
-                    $('#content').load('status.html');
-
-                    $('#resultsbutton').click(function(){
-                        $('#content').load('results.html');
-                        utils.setActiveTab("results");
-                    });
-
-                    $('#logbutton').click(function(){
-                        $('#content').load('log.html');					//questo va in index.js
-                        utils.setActiveTab("log");
-                    });
- 
-                    $('#privacybutton').click(function(){
-                        $('#content').load('privacy.html');
-                        utils.setActiveTab("privacy");					//traduzione
-                    });
-
-                    $('#settingsbutton').click(function(){
-                        $('#content').load('settings.html');
-                        utils.setActiveTab("settings");
-                    });
-
-                    $('#statusbutton').click(function(){
-                        $('#content').load('status.html');
-                        utils.setActiveTab("index");
-                    });
-
-                });			//creare funzione da mettere come parametro complete di load() negli eventi click che faccia setactivetab e quello che fa ajaxcomplete
-            });
-
-		    $(document).ajaxComplete(function () {
-                $(".i18n").css("visibility", "visible");         
-            });
-*/        
-        </script>
-
         <title>Neubot 0.4.16.9 | Web interface</title>
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -104,23 +61,18 @@
                 </h2>
                 <ul class="k2menu" id='menu_tab_list'>
                     <li id='tab_index'>
-<!--                    <a href="index.html" title="The status of the daemon" class='i18n active i18n_status'>Status</a>  -->
                         <a id="statusbutton" title="The status of the daemon" class="i18n i18n_status">Status</a>
                     </li>
                     <li id='tab_results'>
-<!--                    <a href="results.html" title="Your recent results" class='i18n i18n_results'>Results</a>  -->
                         <a id="resultsbutton" title="Your recent results" class="i18n i18n_results">Results</a>
                     </li>
                     <li id='tab_log'>
-<!--                    <a href="log.html" title="Log" class='i18n i18n_log'>Log</a  -->
                         <a id="logbutton" title="Log" class="i18n i18n_log">Log</a>
                     </li>
                     <li id='tab_privacy'>
-<!--                    <a href="privacy.html" title="Privacy" class='i18n i18n_privacy'>Privacy</a>  -->
                         <a id="privacybutton" title="Privacy" class="i18n i18n_privacy">Privacy</a>
                     </li>
                     <li id='tab_settings'>
-<!--                    <a href="settings.html" title="Settings" class='i18n i18n_settings'>Settings</a>  -->
                         <a id="settingsbutton" title="Settings" class="i18n i18n_setting">Settings</a>
                     </li>
                     <li id='tab_site'>

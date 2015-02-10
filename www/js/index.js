@@ -71,85 +71,65 @@ function index_init() {
 };
 
 jQuery(document).ready(function() {
-//    i18n.translate(index_init);
+
 
 	i18n.translate(function () {
-		            jQuery.jqplot.config.enablePlugins = true;
-                    tracker = state.tracker(function(){});
-                    tracker.start();
-                
-                    $('#content').load('status.html', function(){
-						$(".i18n").css("visibility", "visible");											
-					});
+        
+/*        jQuery.jqplot.config.enablePlugins = true;
+        tracker = state.tracker(function(){});
+        tracker.start();
+*/                
+        $('#content').load('status.html', function(){
+            $(".i18n").css("visibility", "visible");
+            utils.setActiveTab("index");
+        });
 
-					utils.setActiveTab("index");
-
-
-                    $('#resultsbutton').click(function(){
-                        $('#content').load('results.html', function(){
-							utils.setActiveTab("results");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-
-  					$('#logbutton').click(function(){
-                        $('#content').load('log.html', function(){
-							utils.setActiveTab("log");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-                    
-  					$('#privacybutton').click(function(){
-                        $('#content').load('privacy.html', function(){
-							utils.setActiveTab("privacy");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-
-  					$('#resultsbutton').click(function(){
-                        $('#settings').load('settings.html', function(){
-							utils.setActiveTab("settings");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-
-   				    $('#settingsbutton').click(function(){
-                        $('#content').load('settings.html', function(){
-							utils.setActiveTab("settings");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-
-  					$('#statusbutton').click(function(){
-                        $('#content').load('status.html', function(){
-							utils.setActiveTab("index");
-							$(".i18n").css("visibility", "visible");					
-						});
-					});
-
-               /*     $('#logbutton').click(function(){
-                        $('#content').load('log.html');					
-                        utils.setActiveTab("log");
-                    });
+        $('#resultsbutton').click(function(){
+            $('#content').load('results.html', function(){
+                utils.setActiveTab("results");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
  
-                    $('#privacybutton').click(function(){
-                        $('#content').load('privacy.html');
-                        utils.setActiveTab("privacy");					//traduzione
-                    });
+        $('#logbutton').click(function(){
+            $('#content').load('log.html', function(){
+                utils.setActiveTab("log");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
+                    
+        $('#privacybutton').click(function(){
+            $('#content').load('privacy.html', function(){
+                utils.setActiveTab("privacy");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
 
-                    $('#settingsbutton').click(function(){
-                        $('#content').load('settings.html');
-                        utils.setActiveTab("settings");
-                    });
+        $('#resultsbutton').click(function(){
+            $('#settings').load('settings.html', function(){
+                utils.setActiveTab("settings");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
 
-                    $('#statusbutton').click(function(){
-                        $('#content').load('status.html');
-                        utils.setActiveTab("index");
-                    });
-*/	});
+        $('#settingsbutton').click(function(){
+            $('#content').load('settings.html', function(){
+                utils.setActiveTab("settings");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
+
+        $('#statusbutton').click(function(){
+            $('#content').load('status.html', function(){
+                utils.setActiveTab("index");
+                $(".i18n").css("visibility", "visible");					
+            });
+        });
+
+    });
 });
 
-/*jQuery(document).ajaxComplete(function () {
-                $(".i18n").css("visibility", "visible");         
-});*/
+
+
+
         
