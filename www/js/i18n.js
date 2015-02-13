@@ -23,7 +23,7 @@ var LANG = {};
 
 var i18n = {
     languages: {
-        it: 'Italian'
+        'it-it': 'Italian'
     },
 
     get: function(label) {
@@ -55,6 +55,9 @@ var i18n = {
                 lang = navigator.language.toLowerCase();
             }
         }
+
+		alert("lang:" + lang);
+
         return lang;
     },
 
@@ -77,18 +80,33 @@ var i18n = {
     },
 
     translate: function(init_caller) {
+
+//		alert("entrato in translate");	
+
         var lang = this.getLanguageInUse();
+
+//		alert("lingua in uso:" + lang);
+
+
         if (!lang || !this.languages[lang]) {
+
+			alert("not lang");
+
             jQuery(".i18n").css("visibility", "visible");
             init_caller();
             return;
         }
+
+        if(lang="it-it") lang = "it";                 //perchè dà it-it invece di it?
 
         jQuery.ajax({
             url: "lang/" + lang + ".js",
             dataType: 'script',
             context: this,
             success: function(data) {
+
+//				alert("entrato in funzione interna translate");			
+
                 this.translate_page(data, /^(i18n_.*)$/i);
                 jQuery(".i18n").css("visibility", "visible");
                 init_caller();

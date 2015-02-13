@@ -72,61 +72,76 @@ function index_init() {
 
 jQuery(document).ready(function() {
 
+//        i18n.translate(function () {});
 
-	i18n.translate(function () {
+
+	//i18n.translate(function () {
         
 /*        jQuery.jqplot.config.enablePlugins = true;
         tracker = state.tracker(function(){});
         tracker.start();
 */                
         $('#content').load('status.html', function(){
-            $(".i18n").css("visibility", "visible");
+       //     $(".i18n").css("visibility", "visible");
             utils.setActiveTab("index");
+			i18n.translate(function () {});
         });
 
         $('#resultsbutton').click(function(){
             $('#content').load('results.html', function(){
                 utils.setActiveTab("results");
-                $(".i18n").css("visibility", "visible");					
-            });
+        //        $(".i18n").css("visibility", "visible");					
+				i18n.translate(function () {});            
+			});
         });
  
         $('#logbutton').click(function(){
             $('#content').load('log.html', function(){
                 utils.setActiveTab("log");
-                $(".i18n").css("visibility", "visible");					
-            });
+                //$(".i18n").css("visibility", "visible");					
+			    i18n.translate(function () {});            
+			});
         });
                     
         $('#privacybutton').click(function(){
             $('#content').load('privacy.html', function(){
                 utils.setActiveTab("privacy");
-                $(".i18n").css("visibility", "visible");					
-            });
+                //$(".i18n").css("visibility", "visible");					
+			    i18n.translate(function () {});            
+			});
         });
 
         $('#resultsbutton').click(function(){
             $('#settings').load('settings.html', function(){
                 utils.setActiveTab("settings");
-                $(".i18n").css("visibility", "visible");					
-            });
+                //$(".i18n").css("visibility", "visible");					
+                i18n.translate(function () {});
+			});
         });
 
         $('#settingsbutton').click(function(){
             $('#content').load('settings.html', function(){
                 utils.setActiveTab("settings");
-                $(".i18n").css("visibility", "visible");					
-            });
+                //$(".i18n").css("visibility", "visible");					
+			    i18n.translate(function () {});            
+			});
         });
 
         $('#statusbutton').click(function(){
             $('#content').load('status.html', function(){
                 utils.setActiveTab("index");
-                $(".i18n").css("visibility", "visible");					
+                //$(".i18n").css("visibility", "visible");					
+                i18n.translate(function () {});
             });
         });
 
-    });
+    //});
+
+/*		$(document).ajaxComplete(function () {
+			i18n.translate(function () {});
+		});
+
+*/
 });
 
 
