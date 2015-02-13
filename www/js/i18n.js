@@ -23,7 +23,8 @@ var LANG = {};
 
 var i18n = {
     languages: {
-        'it-it': 'Italian'
+        'it-it': 'Italian',
+		it: 'Italian'
     },
 
     get: function(label) {
@@ -97,7 +98,7 @@ var i18n = {
             return;
         }
 
-        if(lang="it-it") lang = "it";                 //perchè dà it-it invece di it?
+        if(lang="it-it") lang = "it";                 //perchè dà it-it invece di it? è il browser
 
         jQuery.ajax({
             url: "lang/" + lang + ".js",
