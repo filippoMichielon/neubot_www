@@ -86,8 +86,6 @@ var i18n = {
 
         if (!lang || !this.languages[lang]) {
 
-			alert("not lang");
-
             jQuery(".i18n").css("visibility", "visible");
             init_caller();
             return;
