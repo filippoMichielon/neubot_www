@@ -57,7 +57,7 @@ var i18n = {
             }
         }
 
-		alert("lang:" + lang);
+//		alert("lang:" + lang);
 
         return lang;
     },
@@ -82,12 +82,7 @@ var i18n = {
 
     translate: function(init_caller) {
 
-//		alert("entrato in translate");	
-
         var lang = this.getLanguageInUse();
-
-//		alert("lingua in uso:" + lang);
-
 
         if (!lang || !this.languages[lang]) {
 
@@ -98,15 +93,13 @@ var i18n = {
             return;
         }
 
-        if(lang="it-it") lang = "it";                 //perchè dà it-it invece di it? è il browser
+        if(lang="it-it") lang = "it";      
 
         jQuery.ajax({
             url: "lang/" + lang + ".js",
             dataType: 'script',
             context: this,
             success: function(data) {
-
-//				alert("entrato in funzione interna translate");			
 
                 this.translate_page(data, /^(i18n_.*)$/i);
                 jQuery(".i18n").css("visibility", "visible");
