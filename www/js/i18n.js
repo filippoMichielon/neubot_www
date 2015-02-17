@@ -41,12 +41,12 @@ var i18n = {
         jQuery.ajax({
             url: '/api/config',
             data: {},
-            type: 'GET',
+            type: 'GET',										//cosa succede se c'è un errore qua
             dataType: 'json',
             success: function(data) {
                 lang = data['www.lang'];
             },
-            async: false  // XXX
+            async: false  // XXX								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
         });
         if (!lang || lang == 'default') {
             if (navigator.userLanguage) {
@@ -56,8 +56,6 @@ var i18n = {
                 lang = navigator.language.toLowerCase();
             }
         }
-
-//		alert("lang:" + lang);
 
         return lang;
     },
@@ -80,14 +78,13 @@ var i18n = {
         });
     },
 
-    translate: function(init_caller) {
+    translate: function() {
 
         var lang = this.getLanguageInUse();
 
         if (!lang || !this.languages[lang]) {
-
+																	//mappare it e it-it x evitare controllo successivo
             jQuery(".i18n").css("visibility", "visible");
-            init_caller();
             return;
         }
 
@@ -101,8 +98,8 @@ var i18n = {
 
                 this.translate_page(data, /^(i18n_.*)$/i);
                 jQuery(".i18n").css("visibility", "visible");
-                init_caller();
             }
         });
     }
 };
+

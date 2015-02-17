@@ -37,7 +37,7 @@ function process_state(data) {
         if (value && value > now) {
             jQuery("#next_rendezvous").text(utils.formatMinutes(value - now));
         }
-    }a
+    }
 
     if (data.events.since) {
         value = utils.getTimeFromSeconds(data.events.since, true);
@@ -61,59 +61,61 @@ function process_state(data) {
 
 }
 
-function index_init() {
+/*function index_init() {
     utils.setActiveTab("index");
 
-    jQuery.jqplot.config.enablePlugins = true;
+    jQuery.jqplot.config.enablePlugins = true;				//da mettere nel document ready
 
     tracker = state.tracker(process_state);
     tracker.start();
 };
-
+*/
 jQuery(document).ready(function() {
         
 /*        jQuery.jqplot.config.enablePlugins = true;
         tracker = state.tracker(function(){});
         tracker.start();
 */                
+
+
         $('#content').load('status.html', function(){
             utils.setActiveTab("index");
-			i18n.translate(function () {});
+            i18n.translate();
         });
 
         $('#resultsbutton').click(function(){
             $('#content').load('results.html', function(){
                 utils.setActiveTab("results");
-				i18n.translate(function () {});            
-			});
+                i18n.translate(function () {});            
+            });
         });
  
         $('#logbutton').click(function(){
             $('#content').load('log.html', function(){
                 utils.setActiveTab("log");
-			    i18n.translate(function () {});            
-			});
+                i18n.translate(function () {});            
+            });
         });
                     
         $('#privacybutton').click(function(){
             $('#content').load('privacy.html', function(){
                 utils.setActiveTab("privacy");
-			    i18n.translate(function () {});            
-			});
+                i18n.translate(function () {});            
+            });
         });
 
         $('#resultsbutton').click(function(){
-            $('#settings').load('settings.html', function(){
+            $('#settings').load('settings.html', function(){          //è influente l'ordine in cui si caricano i javascript nell'html?
                 utils.setActiveTab("settings");
                 i18n.translate(function () {});
-			});
+            });
         });
 
         $('#settingsbutton').click(function(){
             $('#content').load('settings.html', function(){
                 utils.setActiveTab("settings");
-			    i18n.translate(function () {});            
-			});
+                i18n.translate(function () {});            
+            });
         });
 
         $('#statusbutton').click(function(){
@@ -123,9 +125,4 @@ jQuery(document).ready(function() {
             });
         });
 
-});
-
-
-
-
-        
+});        
