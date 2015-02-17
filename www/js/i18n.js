@@ -34,16 +34,20 @@ var i18n = {
 
     getLanguageInUse: function() {
         var lang = undefined;
-        jQuery.ajax({
-            url: '/api/config',
-            data: {},
-            type: 'GET',										//cosa succede se c'è un errore qua
-            dataType: 'json',
-            success: function(data) {
-                lang = data['www.lang'];
-            },
-            async: true  								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
-        });
+        try {
+            jQuery.ajax({
+                url: '/api/config',
+                data: {},
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    lang = data['www.lang'];
+                },
+                async: true  								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
+            });
+        } catch (err) {
+            console.error(err);
+        }
         if (!lang || lang == 'default') {
             if (navigator.userLanguage) {
                 lang = navigator.userLanguage.toLowerCase().substring(0,2);
