@@ -43,7 +43,7 @@ var i18n = {
                 success: function(data) {
                     lang = data['www.lang'];
                 },
-                async: true  								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
+                async: true
             });
         } catch (err) {
             console.error(err);
