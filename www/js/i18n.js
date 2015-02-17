@@ -22,10 +22,6 @@
 var LANG = {};
 
 var i18n = {
-    languages: {
-        'it-it': 'Italian',
-		it: 'Italian'
-    },
 
     get: function(label) {
         if (LANG[label]) {
@@ -46,14 +42,14 @@ var i18n = {
             success: function(data) {
                 lang = data['www.lang'];
             },
-            async: false  // XXX								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
+            async: true  								//this.getlanguage in use con funzione di callback che fa le stesse cose e rendere tutto asincrono
         });
         if (!lang || lang == 'default') {
             if (navigator.userLanguage) {
-                lang = navigator.userLanguage.toLowerCase();
+                lang = navigator.userLanguage.toLowerCase().substring(0,2);
             }
             else if (navigator.language) {
-                lang = navigator.language.toLowerCase();
+                lang = navigator.language.toLowerCase().substring(0,2);
             }
         }
 
@@ -81,14 +77,6 @@ var i18n = {
     translate: function() {
 
         var lang = this.getLanguageInUse();
-
-        if (!lang || !this.languages[lang]) {
-																	//mappare it e it-it x evitare controllo successivo
-            jQuery(".i18n").css("visibility", "visible");
-            return;
-        }
-
-        if(lang="it-it") lang = "it";      
 
         jQuery.ajax({
             url: "lang/" + lang + ".js",

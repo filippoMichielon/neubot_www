@@ -86,42 +86,42 @@ jQuery(document).ready(function() {
         $('#resultsbutton').click(function(){
             $('#content').load('results.html', function(){
                 utils.setActiveTab("results");
-                i18n.translate(function () {});            
+                i18n.translate();            
             });
         });
  
         $('#logbutton').click(function(){
             $('#content').load('log.html', function(){
                 utils.setActiveTab("log");
-                i18n.translate(function () {});            
+                i18n.translate();            
             });
         });
                     
         $('#privacybutton').click(function(){
             $('#content').load('privacy.html', function(){
                 utils.setActiveTab("privacy");
-                i18n.translate(function () {});            
+                i18n.translate();            
             });
         });
 
         $('#resultsbutton').click(function(){
             $('#settings').load('settings.html', function(){          //è influente l'ordine in cui si caricano i javascript nell'html?
                 utils.setActiveTab("settings");
-                i18n.translate(function () {});
+                i18n.translate();
             });
         });
 
         $('#settingsbutton').click(function(){
             $('#content').load('settings.html', function(){
                 utils.setActiveTab("settings");
-                i18n.translate(function () {});            
+                i18n.translate();            
             });
         });
 
         $('#statusbutton').click(function(){
             $('#content').load('status.html', function(){
                 utils.setActiveTab("index");
-                i18n.translate(function () {});
+                i18n.translate();
             });
         });
 
