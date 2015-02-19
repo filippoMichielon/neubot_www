@@ -41,8 +41,8 @@ var i18n = {
             type: 'GET',
             dataType: 'json',
             error: function() {
-                lang = "en";
-            },
+                return;
+			},
             success: function(data) {
                 lang = data['www.lang'];
             }
