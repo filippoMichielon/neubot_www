@@ -42,7 +42,7 @@ var i18n = {
             dataType: 'json',
             error: function() {
                 return;
-			},
+            },
             success: function(data) {
                 lang = data['www.lang'];
             }
