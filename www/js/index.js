@@ -62,6 +62,12 @@ function process_state(data) {
 }
 
 jQuery(document).ready(function() {
+
+
+    var prev, curr, next;
+
+    var sez, link;
+
         
     jQuery.jqplot.config.enablePlugins = true;
     tracker = state.tracker(function(){});
@@ -70,48 +76,128 @@ jQuery(document).ready(function() {
     $('#content').load('status.html', function(){
         utils.setActiveTab("index");
         i18n.translate();
+
+		curr = "status.html";
+
     });
 
-    $('#resultsbutton').click(function(){
-        $('#content').load('results.html', function(){
+
+    $('.sect').click(function () {
+ 
+        sez = $(this).attr('id');
+        sez = sez.substring(0, sez.indexOf("link"));
+        link = sez + ".html";
+
+        $('#content').load(link, function () {
+
+            utils.setActiveTab(sez);
+            i18n.translate();
+
+        });
+
+    });
+
+
+/*    $('#resultslink').click(function(){
+
+        sez = $(this).attr('id');
+
+sez = sez.substring( 0, sez.indexOf( "link" ) );
+
+var sez = sez + ".html";
+
+        $('#content').load(sez, function(){
             utils.setActiveTab("results");
-            i18n.translate();            
+            i18n.translate();  
+   
+/*            try {  
+
+                prev = curr;
+
+                curr = sez;
+
+alert("prev: " + prev + " curr: " + curr);
+
+                window.history.pushState({state: "results"}, '', "results.html");
+                evt.preventDefault();
+
+
+            }catch(e){
+                return;
+            }    
+
         });
     });
 
-    $('#logbutton').click(function(){
+
+
+    $('#loglink').click(function(){
         $('#content').load('log.html', function(){
             utils.setActiveTab("log");
             i18n.translate();            
         });
     });
                     
-    $('#privacybutton').click(function(){
+    $('#privacylink').click(function(){
         $('#content').load('privacy.html', function(){
             utils.setActiveTab("privacy");
             i18n.translate();            
         });
     });
 
-    $('#resultsbutton').click(function(){
+    $('#resultslink').click(function(){
         $('#settings').load('settings.html', function(){
             utils.setActiveTab("settings");
             i18n.translate();
         });
     });
 
-    $('#settingsbutton').click(function(){
+    $('#settingslink').click(function(){
         $('#content').load('settings.html', function(){
             utils.setActiveTab("settings");
             i18n.translate();            
         });
     });
 
-    $('#statusbutton').click(function(){
+    $('#status').click(function(){
         $('#content').load('status.html', function(){
             utils.setActiveTab("index");
             i18n.translate();
         });
     });
+
+ /*   window.addEventListener("popstate", function (e) {
+
+
+alert(prev);
+
+
+
+		$('#content').load(prev, function(){
+            utils.setActiveTab("index");
+            i18n.translate();
+        });        
+
+//manca cambio storia
+
+	history.back();
+    });
+
+window.addEventListener('popstate', function(event) {
+  console.log('popstate fired!');
+
+  updateContent(event.state);
+});
+
+
+
+/*
+if ("pushState" in history) {
+    $("a").on("click", function() {
+        history.pushState(null, this.textContent, this.href);
+        return false;
+    });​
+}
+*/
 
 });        
