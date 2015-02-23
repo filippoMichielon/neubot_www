@@ -74,7 +74,7 @@ jQuery(document).ready(function() {
     tracker.start();
 
     $('#content').load('status.html', function(){
-        utils.setActiveTab("index");
+        utils.setActiveTab("status");
         i18n.translate();
 
 		curr = "status.html";
@@ -129,44 +129,7 @@ alert("prev: " + prev + " curr: " + curr);
         });
     });
 
-
-
-    $('#loglink').click(function(){
-        $('#content').load('log.html', function(){
-            utils.setActiveTab("log");
-            i18n.translate();            
-        });
-    });
-                    
-    $('#privacylink').click(function(){
-        $('#content').load('privacy.html', function(){
-            utils.setActiveTab("privacy");
-            i18n.translate();            
-        });
-    });
-
-    $('#resultslink').click(function(){
-        $('#settings').load('settings.html', function(){
-            utils.setActiveTab("settings");
-            i18n.translate();
-        });
-    });
-
-    $('#settingslink').click(function(){
-        $('#content').load('settings.html', function(){
-            utils.setActiveTab("settings");
-            i18n.translate();            
-        });
-    });
-
-    $('#status').click(function(){
-        $('#content').load('status.html', function(){
-            utils.setActiveTab("index");
-            i18n.translate();
-        });
-    });
-
- /*   window.addEventListener("popstate", function (e) {
+   window.addEventListener("popstate", function (e) {
 
 
 alert(prev);
@@ -188,16 +151,5 @@ window.addEventListener('popstate', function(event) {
 
   updateContent(event.state);
 });
-
-
-
-/*
-if ("pushState" in history) {
-    $("a").on("click", function() {
-        history.pushState(null, this.textContent, this.href);
-        return false;
-    });​
-}
 */
-
 });        
