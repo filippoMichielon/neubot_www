@@ -36,7 +36,7 @@ var i18n = {
         var lang = undefined;
 
         jQuery.ajax({
-            url: '/api/config',
+            url: utils.makeURL('/api/config'),
             data: {},
             type: 'GET',
             dataType: 'json',

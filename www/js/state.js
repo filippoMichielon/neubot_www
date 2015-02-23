@@ -170,7 +170,7 @@ var state = (function() {
         //
         function get_state() {
             var params = {
-                url: "/api/state?t=" + curtime,  // XXX		//metterla com'era prima
+                url: utils.makeURL("/api/state?t=" + curtime),  // XXX
                 error: get_state_error,
                 success: get_state_success,
                 dataType: "json"
