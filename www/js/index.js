@@ -63,93 +63,26 @@ function process_state(data) {
 
 jQuery(document).ready(function() {
 
+    var section, link;
 
-    var prev, curr, next;
-
-    var sez, link;
-
-        
     jQuery.jqplot.config.enablePlugins = true;
     tracker = state.tracker(function(){});
     tracker.start();
 
-    $('#content').load('status.html', function(){
+    $("#content").load("status.html", function(){
         utils.setActiveTab("status");
         i18n.translate();
-
-		curr = "status.html";
-
     });
 
 
-    $('.sect').click(function () {
- 
-        sez = $(this).attr('id');
-        sez = sez.substring(0, sez.indexOf("link"));
-        link = sez + ".html";
+    $(".sect").click(function () {
+        section = $(this).attr("id");
+        section = section.substring(0, section.indexOf("link"));
+        link = section + ".html";
 
-        $('#content').load(link, function () {
-
-            utils.setActiveTab(sez);
+        $("#content").load(link, function () {
+            utils.setActiveTab(section);
             i18n.translate();
-
-        });
-
-    });
-
-
-/*    $('#resultslink').click(function(){
-
-        sez = $(this).attr('id');
-
-sez = sez.substring( 0, sez.indexOf( "link" ) );
-
-var sez = sez + ".html";
-
-        $('#content').load(sez, function(){
-            utils.setActiveTab("results");
-            i18n.translate();  
-   
-/*            try {  
-
-                prev = curr;
-
-                curr = sez;
-
-alert("prev: " + prev + " curr: " + curr);
-
-                window.history.pushState({state: "results"}, '', "results.html");
-                evt.preventDefault();
-
-
-            }catch(e){
-                return;
-            }    
-
         });
     });
-
-   window.addEventListener("popstate", function (e) {
-
-
-alert(prev);
-
-
-
-		$('#content').load(prev, function(){
-            utils.setActiveTab("index");
-            i18n.translate();
-        });        
-
-//manca cambio storia
-
-	history.back();
-    });
-
-window.addEventListener('popstate', function(event) {
-  console.log('popstate fired!');
-
-  updateContent(event.state);
-});
-*/
 });        
