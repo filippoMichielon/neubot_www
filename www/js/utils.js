@@ -215,6 +215,7 @@ var utils = (function() {
         
         if (path.indexOf("/") != 0) {
             path = "/" + path;
+
         }
  
         return "http://127.0.0.1:9774" + path;
