@@ -74,9 +74,9 @@ var LANG = {
  Neubot servers are deployed on the distributed server-side\
  <a href="http://www.measurementlab.net">Measurement Lab</a> platform.',
 
-    'i18n_header_subtitle': 'The web-interface to control the neubot daemon',
+    'i18n_header_subtitle': 'The net neutrality software, powered by Nexa Center',
 
-    'i18n_header_title': '<a href="index.html">Neubot web interface</a>',
+    'i18n_header_title': '<a href="index.html">Neubot</a>',
 
     'i18n_idle_status_text':
 'The daemon is sleeping. The next rendezvous will\

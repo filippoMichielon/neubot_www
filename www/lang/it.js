@@ -53,8 +53,8 @@ LANG = {
      * the right the corresponding translation.
      */
 
-    'i18n_header_subtitle': "L'interfaccia web per controllare Neubot",
-    'i18n_header_title': '<a href="index.html">Interfaccia Web di Neubot</a>',
+    'i18n_header_subtitle': "Neubot",
+    'i18n_header_title': '<a href="index.html">Il software per la neutralità della rete, by Nexa Center</a>',
 
     'i18n_text_direction': "ltr",
     'i18n_settings': "Impostazioni",
