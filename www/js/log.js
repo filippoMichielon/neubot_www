@@ -44,7 +44,7 @@ function log_init() {
                 switch (result["severity"]) {
                     case "ERROR": bgcolor = '#ff9977'; break;
                     case "WARNING": bgcolor = '#ffff55'; break;
-                    case "INFO": bgcolor = '#bbffff'; break;
+                    case "INFO": bgcolor = '#bfffc2'; break;
                 }
                 html += "<tr style='background-color: " + bgcolor + ";'>";
                 html += "<td><span>" + utils.getTimeFromSeconds(result["timestamp"], true, true) + "</span></td>";
