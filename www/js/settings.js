@@ -127,6 +127,8 @@ function settings_init() {
         }
     });
 
+
+
     tracker = state.tracker(process_state);
     tracker.start();
 };
