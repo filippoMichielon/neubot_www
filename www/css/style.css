@@ -361,7 +361,7 @@ table#state td {
     background-repeat: no-repeat;
 }
 table#state {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-left: 5px;
 }
 .entry-content dt {

@@ -47,9 +47,9 @@ function log_init() {
                     case "INFO": bgcolor = '#bbffff'; break;
                 }
                 html += "<tr style='background-color: " + bgcolor + ";'>";
-                html += "<td><small>" + utils.getTimeFromSeconds(result["timestamp"], true, true) + "</small></td>";
+                html += "<td><span>" + utils.getTimeFromSeconds(result["timestamp"], true, true) + "</span></td>";
                 html += "<td>" + result["severity"] + "</td>";
-                html += "<td><small>" + result["message"] + "</small></td>";
+                html += "<td><span>" + result["message"] + "</span></td>";
                 html += "</tr>";
             }
 
