@@ -58,7 +58,7 @@ LANG = {
 
     'i18n_text_direction': "ltr",
     'i18n_settings': "Impostazioni",
-    'i18n_status': "Stato",
+    'i18n_status': "Homepage",
     'i18n_speedtest': "Speedtest",
     'i18n_log': "Log",
     'i18n_privacy': "Privacy",
@@ -111,9 +111,7 @@ I server di Neubot sono installati sulla piattaforma distribuita \
 
     'i18n_welcome_text': "Grazie per aver installato Neubot! Ora avrai \
 le idee più chiare sulla tua connessione a Internet e potrai aiutare \
-la comunità a capire cosa accade nella rete. Questa sezione fornisce un \
-prospetto generale del demone Neubot. Clicca sui vari tab per visualizzare \
-le informazioni relative ai vari test.",
+la comunità a capire cosa accade nella rete. ",
 
     'i18n_current_status': "Stato di Neubot",
 

@@ -252,7 +252,7 @@ degli Abruzzi 24, 10129 Turin, ITALY.&quot;\r\n\
 
     'i18n_state': 'State',
 
-    'i18n_status': 'Status',
+    'i18n_status': 'Homepage',
 
     'i18n_status_text':
 'This is the web interface to control the <em>neubot daemon</em>,\
@@ -288,10 +288,6 @@ degli Abruzzi 24, 10129 Turin, ITALY.&quot;\r\n\
     'i18n_welcome_text':
 'Thank you for using Neubot! You are gaining some understanding\
  about your Internet Connection and helping the Internet Community\
- to understand what is going on in the network. This tab provides\
- a general overview of the status of the neubot daemon. Above there\
- are a number of tabs, one for each available transmission test.\
- Each tab provides more information on the test and allows you to\
- review your recent results.'
+ to understand what is going on in the network.'
 
 };
