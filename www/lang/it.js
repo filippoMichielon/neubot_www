@@ -53,11 +53,11 @@ LANG = {
      * the right the corresponding translation.
      */
 
-    'i18n_header_subtitle': "Neubot",
-    'i18n_header_title': '<a href="index.html">Il software per la neutralità della rete, by Nexa Center</a>',
+    'i18n_header_subtitle': "Il software per la neutralità della rete, by Nexa Center",
+    'i18n_header_title': '<a href="index.html">Neubot</a>',
 
     'i18n_text_direction': "ltr",
-    'i18n_settings': "Impostazioni",
+    'i18n_setting': "Impostazioni",
     'i18n_status': "Homepage",
     'i18n_speedtest': "Speedtest",
     'i18n_log': "Log",
@@ -109,9 +109,26 @@ NEXA su Internet &amp; Società</a> del \
 I server di Neubot sono installati sulla piattaforma distribuita \
 <a href='http://www.measurementlab.net'>Measurement Lab</a>.",
 
-    'i18n_welcome_text': "Grazie per aver installato Neubot! Ora avrai \
+    'i18n_welcome_text': 
+'Grazie per aver installato Neubot! Ora avrai \
 le idee più chiare sulla tua connessione a Internet e potrai aiutare \
-la comunità a capire cosa accade nella rete. ",
+la comunità a capire cosa accade nella rete.<br><br>\
+Neubot è un progetto di ricerca sulla neutralità della rete sviluppato al\
+ <a class="reference external" href="http://nexa.polito.it/">Nexa Center for\
+			Internet &amp; Society</a>, nel <a class="reference external"\
+ href="http://www.dauin.polito.it/">Politecnico di Torino</a>. Il progetto \
+si basa su un piccolo software <a class="reference external" href \
+ ="https://github.com/neubot/neubot/blob/master/COPYING">open source</a> che \
+può essere <a href="http://www.neubot.org/download">scaricato</a> dagli utenti \
+interessati, per installarlo sui propri computer. Il programma lavora in \
+background, effettuando periodicamente dei test di trasmissione usando degli appositi \
+server, messi a disposizione dalla piattaforma distribuita del <a \
+href="http://www.measurementlab.net/">Measurement Lab</a>. I test di \
+trasmissione mettono alla prova la connessione a Internet usando vari protocolli \
+e i risultati vengono salvati sia localmente che sui test server. Il dataset \
+dei risultati contiene degli esempi presi da diversi provider ed è \
+<a href="http://www.neubot.org/data">pubblicato in rete</a>, per permettere \
+a chiunque di analizzare i dati per scopi di ricerca.',
 
     'i18n_current_status': "Stato di Neubot",
 
@@ -294,6 +311,8 @@ a Neubot di pubblicare sul Web il tuo indirizzo Internet affinché possa essere 
 
     "i18n_privacy_warning": "<b>ATTENZIONE! Neubot non eseguirà alcun \
 test finché non confermi di aver letto la privacy policy e non gli \
-fornisci il permesso di salvare e pubblicare il tuo indirizzo Internet</b>."
+fornisci il permesso di salvare e pubblicare il tuo indirizzo Internet</b>.",
+
+"i18n_results": "Risultati"
 
 };

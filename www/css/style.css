@@ -474,3 +474,8 @@ a#x_link_to_status {
      background-color: #FDD;
      padding: 10px;
 }
+
+#textstatus {
+	resize: none;
+	height: 1.2em;
+}

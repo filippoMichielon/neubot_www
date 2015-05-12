@@ -114,10 +114,12 @@ var state = (function() {
                 // Highlight the current state in the
                 // index.html web page.
                 //
-                jQuery('table#state tr').css('background-color',
+             /*   jQuery('table#state tr').css('background-color',
                   'transparent');
                 jQuery('table#state tr#' + data.current).css(
-                  'background-color', '#ffc');
+                  'background-color', '#ffc'); */
+
+				  $("#textstatus").text(data.current);				//da verificare
             }
         }
 
