@@ -200,6 +200,42 @@ advertised download speeds, by country'</a> (in formato XLS).",
     "i18n_speedtest_see_last_days": "giorno",
     "i18n_speedtest_see_last_hours": "ora",
 
+	// neubot/www/descr/dash.html
+
+	"i18n_results_dash_explanation": "Il test dash simula il funzionamento \
+del protocollo DASH (Dynamic Adaptive Stream over HTTP), definito dallo standard \
+ISO-IEC 23009-1. Come accade per il test raw, questo test seleziona ogni volta un server \
+casuale fra quelli del Measurement Lab (così che la velocità di download \
+dovrebbe variare a seconda della latenza round-trip. Il protocollo emulato \
+effettua il download di diverse risorse HTTP dallo stesso server, quindi \
+vengono effettuate numerose misurazioni di velocità per ogni singolo test."
+
+	"i18n_results_dash_explanation_2": "Lo scopo di questo test è utilizzarne \
+i risultati per studiare il comportamento della rete per lo streaming \
+multimediale, e per capire meglio gli algoritmi di adattamento della rete \
+che puntano a riprodurre contenuti multimediali alla miglior qualità possibile \
+supportata dalla rete." 
+
+	// neubot/www/descr/raw.html
+
+	"i18n_results_raw_explanation": "Il test 'raw' è un test sulla rete che \
+mira a misurare la latenza round-trip della ed il goodput di download della tua \
+connessione. Invece di selezionare un server Neubot specifico, questo test \
+si collega ad un server casuale ogni volta (così che ci si aspetta che il goodput \
+vari a seconda della latenza).Il test non simula il funzionamento di nessun \
+protocollo, e invia semplicemente dei dati casuali, in compenso colleziona degli \
+snapshot del goodput di download durante lo svolgimento del test. Lo scopo di \
+questo test è quello di studiare il funzionamento di alcune proprietà del \
+protocollo TCP che potrebbero portare ad una migliore conoscenza riguardo la \
+neutralità della rete."
+
+	"i18n_results_raw_explanation_2": "Ti preghiamo di notare che l'interfaccia \
+non è ancora in grado di visualizzare gli snapshot di TCP e goodput creati da \
+questo test. Abbiamo deciso di rilasciare il cuore di questo test in questa release, \
+anche se l'integrazione nell'interfaccia non era ancora completa, per iniziare \
+a studiare i risultati di questo test, così da poter identificare i parametri che \
+potrebbe essere più utile visualizzare."
+
     // neubot/www/log.html
 
     'i18n_log_intro':
